@@ -14,6 +14,8 @@ public class limbScript : MonoBehaviour
     public bool isArm;
     public bool isLeg;
 
+    public GameObject scriptManager;
+
 
 
 
@@ -27,7 +29,7 @@ public class limbScript : MonoBehaviour
 
         if (isActive && !interactedOnce)
         {
-            gameManagerScript.interact(gameObject);
+            scriptManager.GetComponent<gameManagerScript>().interact(gameObject);
         }
     }
 }

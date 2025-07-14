@@ -80,7 +80,7 @@ public class gameManagerScript : MonoBehaviour
         leg.SetActive(true);
     }
 
-    public static void interact(GameObject limb)
+    public void interact(GameObject limb)
     {
         if(objectInTrigger != null)
         {
@@ -93,6 +93,9 @@ public class gameManagerScript : MonoBehaviour
                 limb.GetComponent<limbScript>().interactedOnce = true;
                 Destroy(objectInTrigger);
 
+                //manage inventory
+                GetComponent<inventoryScript>().itemGrabbed();
+
             }
             else if (limb.GetComponent<limbScript>().isLeg)
             {
@@ -103,6 +106,9 @@ public class gameManagerScript : MonoBehaviour
                 objectInTrigger.GetComponent<BoxCollider2D>().isTrigger = true;
                 //destroy - delayed so it happens offscreen
                 objectInTrigger.GetComponent<ingredientScript>().kickOut();
+
+                //add to score
+                GetComponent<inventoryScript>().itemKicked();
             }
         }
     }
