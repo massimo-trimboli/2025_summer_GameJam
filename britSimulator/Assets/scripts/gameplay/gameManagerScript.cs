@@ -13,6 +13,9 @@ public class gameManagerScript : MonoBehaviour
 
     public GameObject[] ingredients;
 
+    public Vector3 kickLaunchVelocity;
+    public static Vector3 kickLaunchVelocityStatic;
+
     public static GameObject objectInTrigger;
 
 
@@ -20,13 +23,18 @@ public class gameManagerScript : MonoBehaviour
 
     void Start()
     {
+        kickLaunchVelocityStatic = kickLaunchVelocity;
+
         deSpawnOriginalIngredients();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        ////////////////////////////////////////////////////////////////////////////////////////////
+        kickLaunchVelocityStatic = kickLaunchVelocity;
+        
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             summonIngredients(0);
         }
@@ -53,11 +61,11 @@ public class gameManagerScript : MonoBehaviour
     {
         //turn off first to reset animation
         arm.SetActive(false);
-        //leg.SetActive(false);
+        leg.SetActive(false);
 
         // reset interactions
         arm.GetComponent<limbScript>().interactedOnce = false;
-        //leg.GetComponent<limbScript>().interactedOnce = false;
+        leg.GetComponent<limbScript>().interactedOnce = false;
 
         arm.SetActive(true);
     }
@@ -66,6 +74,7 @@ public class gameManagerScript : MonoBehaviour
         //turn off first to reset animation
         arm.SetActive(false);
         leg.SetActive(false);
+
         // reset interactions
         arm.GetComponent<limbScript>().interactedOnce = false;
         leg.GetComponent<limbScript>().interactedOnce = false;
@@ -90,6 +99,12 @@ public class gameManagerScript : MonoBehaviour
             else if (limb.GetComponent<limbScript>().isLeg)
             {
                 //kick if is leg
+                limb.GetComponent<limbScript>().interactedOnce = true;
+                objectInTrigger.GetComponent<Rigidbody2D>().velocity = kickLaunchVelocityStatic;
+                //dissable collisions so it doesnt hit other ingredients
+                objectInTrigger.GetComponent<BoxCollider2D>().isTrigger = true;
+                //destroy - delayed so it happens offscreen
+                objectInTrigger.GetComponent<ingredientScript>().kickOut();
             }
         }
     }

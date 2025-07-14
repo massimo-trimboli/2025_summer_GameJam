@@ -29,7 +29,5 @@ public class limbScript : MonoBehaviour
         {
             gameManagerScript.interact(gameObject);
         }
-
-        print("isActive: " + isActive);
     }
 }

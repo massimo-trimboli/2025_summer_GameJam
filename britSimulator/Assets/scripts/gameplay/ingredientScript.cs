@@ -34,4 +34,15 @@ public class ingredientScript : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+
+    //kill offscreen
+    public void kickOut()
+    {
+        Invoke("despawn", 1f);
+    }
+    void despawn()
+    {
+        Destroy(gameObject);
+    }
 }
