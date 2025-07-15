@@ -139,7 +139,7 @@ public class gameManagerScript : MonoBehaviour
             song.SetActive(false);
         }
 
-        if(song == "uk national anthem")
+        if(song == "god save the queen")
         {
             songList[0].SetActive(true);
         }
