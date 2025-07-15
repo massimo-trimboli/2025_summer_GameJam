@@ -154,6 +154,10 @@ public class gameManagerScript : MonoBehaviour
         {
             songList[1].SetActive(true);
         }
+        else
+        {
+            SceneManager.LoadScene("songlist");
+        }
     }
 
     public void nextScene()

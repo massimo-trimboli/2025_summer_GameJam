@@ -1,4 +1,3 @@
-using Microsoft.Unity.VisualStudio.Editor;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -49,7 +48,7 @@ public class songSelectScript : MonoBehaviour
             //set name and country icon
             TextMeshProUGUI text = button2.transform.GetComponentInChildren<TextMeshProUGUI>();
             text.text = songList[i].name;
-            RawImage flag = button2.GetComponentInChildren<RawImage>();
+            RawImage flag = button2.transform.GetChild(1).GetComponent<RawImage>();
             print(flag);
             flag.texture = songList[i].country;
 
@@ -64,10 +63,10 @@ public class songSelectScript : MonoBehaviour
         GameObject[] songs = GameObject.FindGameObjectsWithTag("song");
         for(int i = 0; i < songs.Length; i++)
         {
-            songs[i].GetComponent<UnityEngine.UI.Image>().color = Color.white;
+            songs[i].GetComponent<RawImage>().color = Color.white;
             if (songs[i] == sender)
             {
-                songs[i].GetComponent<UnityEngine.UI.Image>().color = selectColor;
+                songs[i].GetComponent<RawImage>().color = selectColor;
                 gameManagerScript.song = songList[i].name;
             }
         }
