@@ -10,7 +10,8 @@ public class inventoryScript : MonoBehaviour
     public GameObject[] uiIngredients;
     public TextMeshProUGUI scoreText;
     public GameObject teaTimeGroup;
-    public int score = 0;
+
+    public static int score = 0;
 
     bool hasCup;
     bool hasLeaves;
@@ -22,6 +23,7 @@ public class inventoryScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        score = 0;
         resetIngredients();
         scoreText.text = "score: 0";
     }

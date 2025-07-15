@@ -16,6 +16,11 @@ public class menuScript : MonoBehaviour
         SceneManager.LoadScene("game");
     }
 
+    public void openSonglist()
+    {
+        SceneManager.LoadScene("songlist");
+    }
+
     public void goDoTutorial()
     {
         SceneManager.LoadScene("goDoTutorial");

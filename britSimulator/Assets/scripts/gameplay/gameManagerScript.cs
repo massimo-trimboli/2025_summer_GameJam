@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.Intrinsics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Timeline;
 
 public class gameManagerScript : MonoBehaviour
 {
@@ -18,14 +20,20 @@ public class gameManagerScript : MonoBehaviour
 
     public static GameObject objectInTrigger;
 
+    public static string song = "rule britania";
+    public GameObject[] songList;
+
 
 
 
     void Start()
     {
+        loadSong();
         kickLaunchVelocityStatic = kickLaunchVelocity;
 
         deSpawnOriginalIngredients();
+        print(song);
+        print(inventoryScript.score);
     }
 
     // Update is called once per frame
@@ -51,7 +59,7 @@ public class gameManagerScript : MonoBehaviour
     void summonIngredients(int i)
     {
         //not during tea time
-        if (!GetComponent<inventoryScript>().teaTimeGroup.activeSelf)
+        if (/* !GetComponent<inventoryScript>().teaTimeGroup.activeSelf */ true)
         {
             GameObject obj = GameObject.Instantiate(ingredients[i], spawnPoint.position, spawnPoint.rotation);
             obj.SetActive(true);
@@ -122,5 +130,27 @@ public class gameManagerScript : MonoBehaviour
                 GetComponent<inventoryScript>().itemKicked();
             }
         }
+    }
+
+    void loadSong()
+    {
+        foreach(GameObject song in songList)
+        {
+            song.SetActive(false);
+        }
+
+        if(song == "uk national anthem")
+        {
+            songList[0].SetActive(true);
+        }
+        else if(song == "rule britania")
+        {
+            songList[1].SetActive(true);
+        }
+    }
+
+    public void nextScene()
+    {
+        SceneManager.LoadScene("score");
     }
 }

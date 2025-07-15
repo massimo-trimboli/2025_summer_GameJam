@@ -2323,7 +2323,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2116601774}
         m_TargetAssemblyTypeName: menuScript, Assembly-CSharp
-        m_MethodName: launchGame
+        m_MethodName: openSonglist
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
