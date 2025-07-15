@@ -39,11 +39,18 @@ public class gameManagerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {        
+        /*
         if (Input.GetKeyDown(KeyCode.Space))
         {
             int i = Random.Range(0, ingredients.Length);
             //summonIngredients(i);
             summonRandom();
+        }
+        */
+
+        if(inventoryScript.score < -300)
+        {
+            nextScene();
         }
     }
 

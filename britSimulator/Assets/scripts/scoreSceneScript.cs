@@ -7,6 +7,7 @@ public class scoreSceneScript : MonoBehaviour
 {
     public TextMeshProUGUI score;
     public TextMeshProUGUI song;
+    public GameObject failure;
 
 
 
@@ -14,5 +15,13 @@ public class scoreSceneScript : MonoBehaviour
     {
         score.text = inventoryScript.score.ToString();
         song.text = gameManagerScript.song;
+        if(inventoryScript.score <= 0)
+        {
+            failure.SetActive(true);
+        }
+        else
+        {
+            failure.SetActive(false);
+        }
     }
 }

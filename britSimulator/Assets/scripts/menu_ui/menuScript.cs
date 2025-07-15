@@ -37,7 +37,7 @@ public class menuScript : MonoBehaviour
 
     public void viewCredits()
     {
-
+        SceneManager.LoadScene("credits");
     }
 
     public void openPortfolio()
