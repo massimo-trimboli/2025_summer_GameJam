@@ -32,6 +32,8 @@ public class ingredientScript : MonoBehaviour
         if (collision.gameObject.name == "border")
         {
             Destroy(gameObject);
+            inventoryScript script = GameObject.Find("scriptManager").GetComponent<inventoryScript>();
+            script.addToScore(-100);
         }
     }
 

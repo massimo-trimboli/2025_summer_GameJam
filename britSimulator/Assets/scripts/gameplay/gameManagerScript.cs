@@ -49,10 +49,14 @@ public class gameManagerScript : MonoBehaviour
 
     void summonIngredients(int i)
     {
-        GameObject obj = GameObject.Instantiate(ingredients[i], spawnPoint.position, spawnPoint.rotation);
-        obj.SetActive(true);
-        obj.AddComponent<Rigidbody2D>();
-        obj.GetComponent<Rigidbody2D>().velocity = launchVelocity;
+        //not during tea time
+        if (!GetComponent<inventoryScript>().teaTimeGroup.activeSelf)
+        {
+            GameObject obj = GameObject.Instantiate(ingredients[i], spawnPoint.position, spawnPoint.rotation);
+            obj.SetActive(true);
+            obj.AddComponent<Rigidbody2D>();
+            obj.GetComponent<Rigidbody2D>().velocity = launchVelocity;
+        }
     }
 
     public void useArm()
@@ -89,12 +93,13 @@ public class gameManagerScript : MonoBehaviour
 
             if (limb.GetComponent<limbScript>().isArm)
             {
+                //manage inventory
+                string item = objectInTrigger.GetComponent<ingredientScript>().itemName;
+                GetComponent<inventoryScript>().itemGrabbed(item);
+
                 //grab if is arm
                 limb.GetComponent<limbScript>().interactedOnce = true;
                 Destroy(objectInTrigger);
-
-                //manage inventory
-                GetComponent<inventoryScript>().itemGrabbed();
 
             }
             else if (limb.GetComponent<limbScript>().isLeg)
