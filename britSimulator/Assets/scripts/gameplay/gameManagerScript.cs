@@ -34,7 +34,8 @@ public class gameManagerScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             int i = Random.Range(0, ingredients.Length);
-            summonIngredients(i);
+            //summonIngredients(i);
+            summonRandom();
         }
     }
 
@@ -57,6 +58,11 @@ public class gameManagerScript : MonoBehaviour
             obj.AddComponent<Rigidbody2D>();
             obj.GetComponent<Rigidbody2D>().velocity = launchVelocity;
         }
+    }
+    public void summonRandom()
+    {
+        int i = Random.Range(0, ingredients.Length);
+        summonIngredients(i);
     }
 
     public void useArm()
