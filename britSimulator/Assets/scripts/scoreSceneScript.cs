@@ -15,7 +15,7 @@ public class scoreSceneScript : MonoBehaviour
     {
         score.text = inventoryScript.score.ToString();
         song.text = gameManagerScript.song;
-        if(inventoryScript.score < 100000)
+        if(inventoryScript.score < 1000000)
         {
             failure.SetActive(true);
         }

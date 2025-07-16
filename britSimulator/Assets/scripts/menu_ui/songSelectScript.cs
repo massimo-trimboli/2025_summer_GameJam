@@ -12,6 +12,7 @@ public class songSelectScript : MonoBehaviour
     [Serializable] public class songListEntry
     {
         public string name;
+        public AudioClip audio;
         public Texture country;
         public int index;
     }
@@ -66,6 +67,10 @@ public class songSelectScript : MonoBehaviour
             {
                 songs[i].GetComponent<RawImage>().color = selectColor;
                 gameManagerScript.song = songList[i].name;
+
+                //play song
+                GetComponent<AudioSource>().clip = songList[i].audio;
+                GetComponent<AudioSource>().Play();
             }
         }
     }

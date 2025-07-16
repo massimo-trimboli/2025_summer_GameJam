@@ -20,7 +20,7 @@ public class gameManagerScript : MonoBehaviour
 
     public static GameObject objectInTrigger;
 
-    public static string song = "chi mi na morbheanna";
+    public static string song = "the foggy dew";
     public GameObject[] songList;
 
 
@@ -51,6 +51,15 @@ public class gameManagerScript : MonoBehaviour
         if(inventoryScript.score < 0)
         {
             inventoryScript.score = 0;
+        }
+
+        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.F))
+        {
+            useArm();
+        }
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.K))
+        {
+            useLeg();
         }
     }
 
@@ -169,6 +178,14 @@ public class gameManagerScript : MonoBehaviour
         else if (song == "chi mi na morbheanna")
         {
             songList[5].SetActive(true);
+        }
+        else if (song == "ireland's call")
+        {
+            songList[6].SetActive(true);
+        }
+        else if (song == "the foggy dew")
+        {
+            songList[7].SetActive(true);
         }
         else
         {
