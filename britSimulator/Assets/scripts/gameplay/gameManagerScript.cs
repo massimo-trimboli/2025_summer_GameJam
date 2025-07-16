@@ -20,7 +20,7 @@ public class gameManagerScript : MonoBehaviour
 
     public static GameObject objectInTrigger;
 
-    public static string song = "the foggy dew";
+    public static string song = "come out ye black and tans";
     public GameObject[] songList;
 
 
@@ -48,9 +48,10 @@ public class gameManagerScript : MonoBehaviour
         }
         */
 
-        if(inventoryScript.score < 0)
+        if(inventoryScript.score < -300)
         {
-            inventoryScript.score = 0;
+            //inventoryScript.score = 0;
+            //nextScene();
         }
 
         if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.F))
@@ -186,6 +187,10 @@ public class gameManagerScript : MonoBehaviour
         else if (song == "the foggy dew")
         {
             songList[7].SetActive(true);
+        }
+        else if (song == "come out ye black and tans")
+        {
+            songList[8].SetActive(true);
         }
         else
         {
