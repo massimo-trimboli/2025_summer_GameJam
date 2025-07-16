@@ -20,7 +20,7 @@ public class gameManagerScript : MonoBehaviour
 
     public static GameObject objectInTrigger;
 
-    public static string song = "sosban fach";
+    public static string song = "chi mi na morbheanna";
     public GameObject[] songList;
 
 
@@ -161,6 +161,14 @@ public class gameManagerScript : MonoBehaviour
         else if (song == "sosban fach")
         {
             songList[3].SetActive(true);
+        }
+        else if (song == "rise! rise!")
+        {
+            songList[4].SetActive(true);
+        }
+        else if (song == "chi mi na morbheanna")
+        {
+            songList[5].SetActive(true);
         }
         else
         {

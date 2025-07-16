@@ -928,6 +928,8 @@ Transform:
   - {fileID: 547348783}
   - {fileID: 2008176511}
   - {fileID: 2119792363}
+  - {fileID: 781944595}
+  - {fileID: 1044387464}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &512681532
@@ -1407,6 +1409,66 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720303809}
   m_CullTransparentMesh: 1
+--- !u!1 &781944594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 781944595}
+  - component: {fileID: 781944596}
+  m_Layer: 0
+  m_Name: timeline rise rise
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &781944595
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781944594}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 460381094}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &781944596
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781944594}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: d5894549fec667443a6f43ac8aa14440, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 8316726956207459508, guid: c713a95278d946348bb08bbbff706cc2, type: 2}
+    value: {fileID: 1206531356}
+  - key: {fileID: -323781030745059074, guid: 83dc4d280d224494294f54b108c0b12c, type: 2}
+    value: {fileID: 1206531356}
+  - key: {fileID: 6268037694696345347, guid: 76afa516a269ec64aafb933a89b1df69, type: 2}
+    value: {fileID: 1206531356}
+  - key: {fileID: 4598108606144859622, guid: 15ba21e220f17c64f89998622ec89da7, type: 2}
+    value: {fileID: 1206531356}
+  - key: {fileID: -7903602395762286317, guid: d5894549fec667443a6f43ac8aa14440, type: 2}
+    value: {fileID: 1206531356}
+  m_ExposedReferences:
+    m_References:
+    - 0d73da50f3f406142a5b60929f3f03f6: {fileID: 324926775}
 --- !u!1 &792540730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,6 +1848,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931793342}
   m_CullTransparentMesh: 1
+--- !u!1 &1044387463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1044387464}
+  - component: {fileID: 1044387465}
+  m_Layer: 0
+  m_Name: timeline chi mi na morbheanna
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1044387464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044387463}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 460381094}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &1044387465
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044387463}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: cb778fe1d0edcad4988b66a03ee99d84, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 8316726956207459508, guid: c713a95278d946348bb08bbbff706cc2, type: 2}
+    value: {fileID: 1206531356}
+  - key: {fileID: -323781030745059074, guid: 83dc4d280d224494294f54b108c0b12c, type: 2}
+    value: {fileID: 1206531356}
+  - key: {fileID: 6268037694696345347, guid: 76afa516a269ec64aafb933a89b1df69, type: 2}
+    value: {fileID: 1206531356}
+  - key: {fileID: 4598108606144859622, guid: 15ba21e220f17c64f89998622ec89da7, type: 2}
+    value: {fileID: 1206531356}
+  - key: {fileID: -7903602395762286317, guid: d5894549fec667443a6f43ac8aa14440, type: 2}
+    value: {fileID: 1206531356}
+  - key: {fileID: -4525605742520277610, guid: cb778fe1d0edcad4988b66a03ee99d84, type: 2}
+    value: {fileID: 1206531356}
+  m_ExposedReferences:
+    m_References:
+    - 0d73da50f3f406142a5b60929f3f03f6: {fileID: 324926775}
 --- !u!1 &1048376738
 GameObject:
   m_ObjectHideFlags: 0
@@ -2021,6 +2145,8 @@ MonoBehaviour:
   - {fileID: 547348782}
   - {fileID: 2008176510}
   - {fileID: 2119792362}
+  - {fileID: 781944594}
+  - {fileID: 1044387463}
 --- !u!4 &1206531354
 Transform:
   m_ObjectHideFlags: 0
