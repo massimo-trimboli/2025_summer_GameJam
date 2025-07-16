@@ -926,6 +926,8 @@ Transform:
   m_Children:
   - {fileID: 2078988040}
   - {fileID: 547348783}
+  - {fileID: 2008176511}
+  - {fileID: 2119792363}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &512681532
@@ -1182,7 +1184,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 580372593}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: fd90bcdd1d656e246b07c1358b000a84, type: 3}
@@ -2017,6 +2019,8 @@ MonoBehaviour:
   songList:
   - {fileID: 2078988038}
   - {fileID: 547348782}
+  - {fileID: 2008176510}
+  - {fileID: 2119792362}
 --- !u!4 &1206531354
 Transform:
   m_ObjectHideFlags: 0
@@ -3448,6 +3452,62 @@ RectTransform:
   m_AnchoredPosition: {x: 98.575005, y: -195.29045}
   m_SizeDelta: {x: 602.85, y: 59.338013}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2008176510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2008176511}
+  - component: {fileID: 2008176512}
+  m_Layer: 0
+  m_Name: timeline yma o hyd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2008176511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008176510}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 460381094}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &2008176512
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008176510}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 76afa516a269ec64aafb933a89b1df69, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 8316726956207459508, guid: c713a95278d946348bb08bbbff706cc2, type: 2}
+    value: {fileID: 1206531356}
+  - key: {fileID: -323781030745059074, guid: 83dc4d280d224494294f54b108c0b12c, type: 2}
+    value: {fileID: 1206531356}
+  - key: {fileID: 6268037694696345347, guid: 76afa516a269ec64aafb933a89b1df69, type: 2}
+    value: {fileID: 1206531356}
+  m_ExposedReferences:
+    m_References:
+    - 0d73da50f3f406142a5b60929f3f03f6: {fileID: 324926775}
 --- !u!1 &2078988038
 GameObject:
   m_ObjectHideFlags: 0
@@ -3500,6 +3560,64 @@ Transform:
   m_Children: []
   m_Father: {fileID: 460381094}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2119792362
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2119792363}
+  - component: {fileID: 2119792364}
+  m_Layer: 0
+  m_Name: timeline sosban fach
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2119792363
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119792362}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 460381094}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &2119792364
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119792362}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 15ba21e220f17c64f89998622ec89da7, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 8316726956207459508, guid: c713a95278d946348bb08bbbff706cc2, type: 2}
+    value: {fileID: 1206531356}
+  - key: {fileID: -323781030745059074, guid: 83dc4d280d224494294f54b108c0b12c, type: 2}
+    value: {fileID: 1206531356}
+  - key: {fileID: 6268037694696345347, guid: 76afa516a269ec64aafb933a89b1df69, type: 2}
+    value: {fileID: 1206531356}
+  - key: {fileID: 4598108606144859622, guid: 15ba21e220f17c64f89998622ec89da7, type: 2}
+    value: {fileID: 1206531356}
+  m_ExposedReferences:
+    m_References:
+    - 0d73da50f3f406142a5b60929f3f03f6: {fileID: 324926775}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

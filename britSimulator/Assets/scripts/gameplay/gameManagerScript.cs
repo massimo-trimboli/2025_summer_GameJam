@@ -20,7 +20,7 @@ public class gameManagerScript : MonoBehaviour
 
     public static GameObject objectInTrigger;
 
-    public static string song = "rule britania";
+    public static string song = "sosban fach";
     public GameObject[] songList;
 
 
@@ -48,9 +48,9 @@ public class gameManagerScript : MonoBehaviour
         }
         */
 
-        if(inventoryScript.score < -300)
+        if(inventoryScript.score < 0)
         {
-            nextScene();
+            inventoryScript.score = 0;
         }
     }
 
@@ -153,6 +153,14 @@ public class gameManagerScript : MonoBehaviour
         else if(song == "rule britania")
         {
             songList[1].SetActive(true);
+        }
+        else if (song == "yma o hyd")
+        {
+            songList[2].SetActive(true);
+        }
+        else if (song == "sosban fach")
+        {
+            songList[3].SetActive(true);
         }
         else
         {
