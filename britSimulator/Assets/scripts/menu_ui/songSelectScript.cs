@@ -58,8 +58,6 @@ public class songSelectScript : MonoBehaviour
 
     public void selectSong(GameObject sender)
     {
-        int index;
-
         GameObject[] songs = GameObject.FindGameObjectsWithTag("song");
         for(int i = 0; i < songs.Length; i++)
         {
