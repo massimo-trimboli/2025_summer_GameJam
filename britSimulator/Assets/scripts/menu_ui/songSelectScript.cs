@@ -14,6 +14,7 @@ public class songSelectScript : MonoBehaviour
         public string name;
         public AudioClip audio;
         public Texture country;
+        public int winCondition = 0;
         public int index;
     }
 
@@ -67,6 +68,15 @@ public class songSelectScript : MonoBehaviour
             {
                 songs[i].GetComponent<RawImage>().color = selectColor;
                 gameManagerScript.song = songList[i].name;
+                //set default difficulty
+                if (songList[i].winCondition > 0)
+                {
+                    inventoryScript.winCondition = songList[i].winCondition;
+                }
+                else
+                {
+                    inventoryScript.winCondition = 1000000;
+                }
 
                 //play song
                 GetComponent<AudioSource>().clip = songList[i].audio;

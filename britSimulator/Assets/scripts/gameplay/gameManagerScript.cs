@@ -20,7 +20,7 @@ public class gameManagerScript : MonoBehaviour
 
     public static GameObject objectInTrigger;
 
-    public static string song = "yma o hyd";
+    public static string song = "funiculi funicula";
     public GameObject[] songList;
 
     int restartHold;
@@ -43,7 +43,7 @@ public class gameManagerScript : MonoBehaviour
         if (inventoryScript.score < -300)
         {
             //inventoryScript.score = 0;
-            nextScene();
+            //nextScene();
         }
         //hold to restart
         if (Input.GetKey(KeyCode.R))
@@ -197,6 +197,18 @@ public class gameManagerScript : MonoBehaviour
         else if (song == "come out ye black and tans")
         {
             songList[8].SetActive(true);
+        }
+        else if (song == "erika")
+        {
+            songList[9].SetActive(true);
+        }
+        else if (song == "bella ciao")
+        {
+            songList[10].SetActive(true);
+        }
+        else if (song == "funiculi funicula")
+        {
+            songList[11].SetActive(true);
         }
         else
         {

@@ -853,7 +853,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997591013}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
   m_Name: 
@@ -1067,38 +1067,62 @@ MonoBehaviour:
   - name: god save the queen
     audio: {fileID: 8300000, guid: 8d1fab8421fff0b43896864452e78dc7, type: 3}
     country: {fileID: 2800000, guid: 536913a4a42d759498d12ae42b339560, type: 3}
+    winCondition: 1000000
     index: 0
   - name: rule britania
     audio: {fileID: 8300000, guid: c82c3e62dbaaa2d4591ce43dcab5a593, type: 3}
     country: {fileID: 2800000, guid: 536913a4a42d759498d12ae42b339560, type: 3}
+    winCondition: 1000000
     index: 0
   - name: yma o hyd
     audio: {fileID: 8300000, guid: 123b3b8da458b2d4697159111b46d4b0, type: 3}
     country: {fileID: 2800000, guid: 8473d4b387fd30f42a60f5336f94fc4b, type: 3}
+    winCondition: 1000000
     index: 0
   - name: sosban fach
     audio: {fileID: 8300000, guid: 3b8ec2cf970b00c4eb44c05536dbcb81, type: 3}
     country: {fileID: 2800000, guid: 8473d4b387fd30f42a60f5336f94fc4b, type: 3}
+    winCondition: 1000000
     index: 0
   - name: rise! rise!
     audio: {fileID: 8300000, guid: cc3cf924dbb1684489ba141696c3fd65, type: 3}
     country: {fileID: 2800000, guid: 4c92c16fe11e889439d3bdfd947f99c4, type: 3}
+    winCondition: 1000000
     index: 0
   - name: chi mi na morbheanna
     audio: {fileID: 8300000, guid: b81fd294b93d7764dad3d64d64bbec45, type: 3}
     country: {fileID: 2800000, guid: 4c92c16fe11e889439d3bdfd947f99c4, type: 3}
+    winCondition: 1000000
     index: 0
   - name: ireland's call
     audio: {fileID: 8300000, guid: e530fee8a7ec9f54b8a30f6eeb714422, type: 3}
     country: {fileID: 2800000, guid: 7701a89549aed514cbe74da7998c477a, type: 3}
+    winCondition: 1000000
     index: 0
   - name: the foggy dew
     audio: {fileID: 8300000, guid: b125eb3baf9bac34986969b91024741e, type: 3}
     country: {fileID: 2800000, guid: 7701a89549aed514cbe74da7998c477a, type: 3}
+    winCondition: 1000000
     index: 0
   - name: come out ye black and tans
     audio: {fileID: 8300000, guid: 30b4a8a093a6f0549866868eac4c822d, type: 3}
     country: {fileID: 2800000, guid: 7701a89549aed514cbe74da7998c477a, type: 3}
+    winCondition: 1000000
+    index: 0
+  - name: erika
+    audio: {fileID: 8300000, guid: 36ef3df64d2b1da4d92e739da8caf45a, type: 3}
+    country: {fileID: 2800000, guid: e1e3437e3c3bca949862569b20ed5d82, type: 3}
+    winCondition: 100000
+    index: 0
+  - name: bella ciao
+    audio: {fileID: 8300000, guid: da62e96a578a2c94e877f4d4ec3efa71, type: 3}
+    country: {fileID: 2800000, guid: 30e0ea3b88d25434190a3661a71180be, type: 3}
+    winCondition: 0
+    index: 0
+  - name: funiculi funicula
+    audio: {fileID: 8300000, guid: c68b474fa839b1c40ad0f4ec6a421956, type: 3}
+    country: {fileID: 2800000, guid: 30e0ea3b88d25434190a3661a71180be, type: 3}
+    winCondition: 0
     index: 0
 --- !u!4 &1084996441
 Transform:
@@ -1738,8 +1762,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 249780456}
   m_HandleRect: {fileID: 249780455}
   m_Direction: 2
-  m_Value: 0.9999997
-  m_Size: 0.39351368
+  m_Value: 0.9999998
+  m_Size: 0.33819973
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2095,7 +2119,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.00014767871}
-  m_SizeDelta: {x: 0, y: 959.56}
+  m_SizeDelta: {x: 0, y: 1116.5}
   m_Pivot: {x: 0, y: 1}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

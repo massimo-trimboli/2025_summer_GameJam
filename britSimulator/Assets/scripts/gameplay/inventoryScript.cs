@@ -14,7 +14,8 @@ public class inventoryScript : MonoBehaviour
 
     public static long score = 0;
     double oldScore;
-    public static int winCondition = 1000000;
+    //is set in song select screen, 0 is 1000000 by default
+    public static int winCondition = 100000;
     long theHighScore;
     [SerializeField] Color beatHighScoreColor;
 
