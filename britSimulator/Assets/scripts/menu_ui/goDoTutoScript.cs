@@ -47,4 +47,19 @@ public class goDoTutoScript : MonoBehaviour
         backGround.GetComponent<AudioSource>().enabled = true;
         objectsToSummon.SetActive(true);
     }
+
+
+    //////////////////////////////////////////
+    /// tells the game this is your first time playing
+    /// so this message doesnt pop up again
+    public void pressTutorialButton()
+    {
+        PlayerPrefs.SetInt("firstPlaythrough", 0);
+        GetComponent<menuScript>().openTutorial();
+    }
+    public void pressGameButton()
+    {
+        PlayerPrefs.SetInt("firstPlaythrough", 0);
+        GetComponent<menuScript>().openSonglist();
+    }
 }

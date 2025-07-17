@@ -20,8 +20,10 @@ public class gameManagerScript : MonoBehaviour
 
     public static GameObject objectInTrigger;
 
-    public static string song = "come out ye black and tans";
+    public static string song = "yma o hyd";
     public GameObject[] songList;
+
+    int restartHold;
 
 
 
@@ -38,21 +40,26 @@ public class gameManagerScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {        
-        /*
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            int i = Random.Range(0, ingredients.Length);
-            //summonIngredients(i);
-            summonRandom();
-        }
-        */
-
-        if(inventoryScript.score < -300)
+    {
+        if (inventoryScript.score < -300)
         {
             //inventoryScript.score = 0;
-            //nextScene();
+            nextScene();
         }
+        //hold to restart
+        if (Input.GetKey(KeyCode.R))
+        {
+            restartHold++;
+            if (restartHold > 59)
+            {
+                SceneManager.LoadScene("game");
+            }
+        }
+        else if(Input.GetKeyUp(KeyCode.R))
+        {
+            restartHold = 0;
+        }
+
 
         if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.F))
         {

@@ -18,6 +18,7 @@ public class menuScript : MonoBehaviour
 
     public void openSonglist()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("songlist");
     }
 
@@ -32,6 +33,7 @@ public class menuScript : MonoBehaviour
     }
     public void openMenu()
     {
+        Time.timeScale = 1.0f;
         SceneManager.LoadScene("menu");
     }
 

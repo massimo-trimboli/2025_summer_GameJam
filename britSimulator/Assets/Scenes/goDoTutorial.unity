@@ -2188,9 +2188,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2116601774}
-        m_TargetAssemblyTypeName: menuScript, Assembly-CSharp
-        m_MethodName: openTutorial
+      - m_Target: {fileID: 2116601772}
+        m_TargetAssemblyTypeName: goDoTutoScript, Assembly-CSharp
+        m_MethodName: pressTutorialButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2321,9 +2321,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2116601774}
-        m_TargetAssemblyTypeName: menuScript, Assembly-CSharp
-        m_MethodName: openSonglist
+      - m_Target: {fileID: 2116601772}
+        m_TargetAssemblyTypeName: goDoTutoScript, Assembly-CSharp
+        m_MethodName: pressGameButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

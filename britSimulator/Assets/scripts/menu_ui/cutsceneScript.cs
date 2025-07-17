@@ -14,16 +14,35 @@ public class cutsceneScript : MonoBehaviour
     void Start()
     {
         VideoPlayer player = GetComponent<VideoPlayer>();
-        player.loopPointReached += nextScene;
+        player.loopPointReached += videoEnd;
 
-        button1.SetActive(true);
-        skipButton.SetActive(false);
+        summonButton();
     }
 
-    void nextScene(VideoPlayer player)
+    void videoEnd(VideoPlayer player)
     {
-        scriptObject.GetComponent<menuScript>().goDoTutorial();
+        nextScene();
     }
+    public void nextScene()
+    {
+        //if first time watching
+        if (PlayerPrefs.GetInt("firstTimeWatchingCutscene", 1) == 1)
+        {
+            PlayerPrefs.SetInt("firstTimeWatchingCutscene", 0);
+        }
+
+        //if first playthrough
+        if (PlayerPrefs.GetInt("firstPlaythrough", 1) == 1)
+        {
+            scriptObject.GetComponent<menuScript>().goDoTutorial();
+        }
+        else
+        {
+            scriptObject.GetComponent<menuScript>().openSonglist();
+        }
+    }
+
+
 
     public void summonButton()
     {
