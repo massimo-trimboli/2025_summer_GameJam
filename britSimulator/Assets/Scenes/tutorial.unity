@@ -737,10 +737,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: grab a teacup to get started. grabbing ingredients while you don't have
-    a cup will result in you dropping them and loosing points. if you grab a cup
+  m_text: Grab a teacup to get started. Grabbing ingredients while you don't have
+    a cup will result in you dropping them and loosing points. If you grab a cup
     while you already have one, it will knock all your ingredients to the floor and
-    you lose points.
+    you will lose points.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c17aa8147db0f8468fe02f64352743a, type: 2}
   m_sharedMaterial: {fileID: 796561139479596404, guid: 4c17aa8147db0f8468fe02f64352743a, type: 2}
@@ -1354,14 +1354,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'use MOUSE BUTTONS (or "J","K"/"D""F") to interact with ingredients
+  m_text: 'Use the MOUSE BUTTONS (or "J","K"/"D""F") to interact with ingredients.
 
 
-    kicking
-    items will always yield point
+    Kicking
+    items will always yield points.
 
 
-    grabbing however is more complicated'
+    Grabbing however is more complicated:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c17aa8147db0f8468fe02f64352743a, type: 2}
   m_sharedMaterial: {fileID: 796561139479596404, guid: 4c17aa8147db0f8468fe02f64352743a, type: 2}
@@ -1495,16 +1495,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'making tea requires 3 ingredients: tea leaves, hot water, milk, and a
+  m_text: 'Making tea requires 3 ingredients: tea leaves, hot water, milk, and a
     cup to put them in. Make sure not to add two of the same ingredient, since it
-    will ruin your tea Once you gather all 4 components, its TEA TIME. tea time will
-    reset your ingredients and DOUBLE YOUR SCORE!
+    will ruin your tea. Once you gather all 4 components, its TEA TIME. Tea Time
+    will reset your ingredients and DOUBLE YOUR SCORE!
 
 
-    Open the menu with the ESCAPE
-    key
+    Open the menu with the
+    ESCAPE key.
 
-    you can restart at any time by holding "R"'
+    you can restart at any time by holding "R".'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c17aa8147db0f8468fe02f64352743a, type: 2}
   m_sharedMaterial: {fileID: 796561139479596404, guid: 4c17aa8147db0f8468fe02f64352743a, type: 2}

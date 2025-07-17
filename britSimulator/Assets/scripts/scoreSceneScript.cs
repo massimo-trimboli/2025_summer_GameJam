@@ -34,12 +34,12 @@ public class scoreSceneScript : MonoBehaviour
     void getHighScore()
     {
         //simple save system
-        int theHighScore = PlayerPrefs.GetInt(gameManagerScript.song, 0);
+        long theHighScore = long.Parse(PlayerPrefs.GetString(gameManagerScript.song, "0"));
         
         if(inventoryScript.score > theHighScore)
         {
             highScore.text = "new High Score";
-            PlayerPrefs.SetInt(gameManagerScript.song, inventoryScript.score);
+            PlayerPrefs.SetString(gameManagerScript.song, inventoryScript.score.ToString());
         }
         else
         {

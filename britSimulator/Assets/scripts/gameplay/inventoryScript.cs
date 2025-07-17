@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -11,10 +12,10 @@ public class inventoryScript : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public GameObject teaTimeGroup;
 
-    public static int score = 0;
-    float oldScore;
+    public static long score = 0;
+    double oldScore;
     public static int winCondition = 1000000;
-    int theHighScore;
+    long theHighScore;
     [SerializeField] Color beatHighScoreColor;
 
     bool hasCup;
@@ -31,7 +32,7 @@ public class inventoryScript : MonoBehaviour
         resetIngredients();
         scoreText.text = "score: 0";
 
-        theHighScore = PlayerPrefs.GetInt(gameManagerScript.song, 0);
+        theHighScore = long.Parse(PlayerPrefs.GetString(gameManagerScript.song, "0"));
     }
 
     void Update()
@@ -56,13 +57,16 @@ public class inventoryScript : MonoBehaviour
         //gradualy increment score
         if(oldScore != score)
         {
-            float difference = score - oldScore;
-            int speedFrames = 45;
-            float increment = difference / speedFrames;
+            double difference = score - oldScore;
+            long speedFrames = 45;
+            double increment = difference / speedFrames;
 
             oldScore += increment;
+
             //+1 because it rounds down
-            scoreText.text = "score: " + (Mathf.RoundToInt(oldScore) + 1).ToString();
+            int sign=0;
+            if (score>0){sign=1;}
+            scoreText.text = "score: " + (((long)Math.Floor(oldScore) + sign).ToString());
         }
     }
 
@@ -154,6 +158,11 @@ public class inventoryScript : MonoBehaviour
         if(hasCup && hasLeaves && hasKettle && hasMilk)
         {
             teaTime();
+            //tea time can kill you iff activate while score is negative
+            if(score < 0)
+            {
+                score = 100;
+            }
         }
     }
 
@@ -165,7 +174,6 @@ public class inventoryScript : MonoBehaviour
     void teaTime()
     {
         score *= 2;
-        scoreText.text = "score: " + score;
         resetIngredients();
         teaTimeGroup.SetActive(true);
     }

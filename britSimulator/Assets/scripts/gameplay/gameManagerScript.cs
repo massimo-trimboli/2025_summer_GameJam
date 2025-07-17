@@ -34,7 +34,6 @@ public class gameManagerScript : MonoBehaviour
         kickLaunchVelocityStatic = kickLaunchVelocity;
 
         deSpawnOriginalIngredients();
-        print(song);
         print(inventoryScript.score);
     }
 
