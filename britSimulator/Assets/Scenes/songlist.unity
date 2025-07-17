@@ -1124,6 +1124,16 @@ MonoBehaviour:
     country: {fileID: 2800000, guid: 30e0ea3b88d25434190a3661a71180be, type: 3}
     winCondition: 0
     index: 0
+  - name: sakura sakura
+    audio: {fileID: 8300000, guid: 6f8feddfce6b5ca46b4a0bb10ac21258, type: 3}
+    country: {fileID: 2800000, guid: c7868799e7f0c8b4795996a2d5d7a8e4, type: 3}
+    winCondition: 0
+    index: 0
+  - name: kibo no hikari
+    audio: {fileID: 8300000, guid: 9594c605afa5c2447a4235a03efed787, type: 3}
+    country: {fileID: 2800000, guid: c7868799e7f0c8b4795996a2d5d7a8e4, type: 3}
+    winCondition: 0
+    index: 0
 --- !u!4 &1084996441
 Transform:
   m_ObjectHideFlags: 0
@@ -1762,8 +1772,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 249780456}
   m_HandleRect: {fileID: 249780455}
   m_Direction: 2
-  m_Value: 0.9999998
-  m_Size: 0.33819973
+  m_Value: 0.9999999
+  m_Size: 0.2760234
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2119,7 +2129,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.00014767871}
-  m_SizeDelta: {x: 0, y: 1116.5}
+  m_SizeDelta: {x: 0, y: 1368}
   m_Pivot: {x: 0, y: 1}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

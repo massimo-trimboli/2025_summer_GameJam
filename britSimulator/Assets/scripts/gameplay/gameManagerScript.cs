@@ -20,7 +20,7 @@ public class gameManagerScript : MonoBehaviour
 
     public static GameObject objectInTrigger;
 
-    public static string song = "funiculi funicula";
+    public static string song = "kibo no hikari";
     public GameObject[] songList;
 
     int restartHold;
@@ -43,7 +43,7 @@ public class gameManagerScript : MonoBehaviour
         if (inventoryScript.score < -300)
         {
             //inventoryScript.score = 0;
-            //nextScene();
+            nextScene();
         }
         //hold to restart
         if (Input.GetKey(KeyCode.R))
@@ -209,6 +209,14 @@ public class gameManagerScript : MonoBehaviour
         else if (song == "funiculi funicula")
         {
             songList[11].SetActive(true);
+        }
+        else if (song == "sakura sakura")
+        {
+            songList[12].SetActive(true);
+        }
+        else if (song == "kibo no hikari")
+        {
+            songList[13].SetActive(true);
         }
         else
         {
