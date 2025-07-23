@@ -25,6 +25,8 @@ public class gameManagerScript : MonoBehaviour
 
     int restartHold;
 
+    public static bool isOnMobile = true;
+
 
 
 
@@ -59,14 +61,16 @@ public class gameManagerScript : MonoBehaviour
             restartHold = 0;
         }
 
-
-        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.F))
+        if (!isOnMobile)
         {
-            useArm();
-        }
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.K))
-        {
-            useLeg();
+            if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.F))
+            {
+                useArm();
+            }
+            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.J) || Input.GetKeyDown(KeyCode.K))
+            {
+                useLeg();
+            }
         }
     }
 
