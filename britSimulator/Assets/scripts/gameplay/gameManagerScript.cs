@@ -20,7 +20,7 @@ public class gameManagerScript : MonoBehaviour
 
     public static GameObject objectInTrigger;
 
-    public static string song = "kibo no hikari";
+    public static string song = "tutorial";
     public GameObject[] songList;
 
     int restartHold;
